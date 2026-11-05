@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Вопрос по архитектуре
+    url: https://github.com/AkaDaka1/ResumeMaker/blob/main/AGENTS.md
+    about: Сначала проверьте архитектурные правила и границы компонентов.
+  - name: Приватное сообщение об уязвимости
+    url: https://github.com/AkaDaka1/ResumeMaker/security/advisories/new
+    about: Не создавайте публичный issue для проблем безопасности.

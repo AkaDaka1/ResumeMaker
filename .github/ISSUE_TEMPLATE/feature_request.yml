@@ -1,0 +1,57 @@
+name: Feature request
+description: Suggest a product or engineering change
+title: "[feat]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Перед предложением сверьтесь с `AGENTS.md` и `docs/product-decisions.md`:
+        некоторые решения уже зафиксированы для MVP.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Проблема
+      description: Какую пользовательскую или инженерную задачу нужно решить?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Предлагаемое решение
+      description: Опишите поведение и границы, а не только реализацию.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Альтернативы
+      description: Что ещё рассматривали и почему это хуже?
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Компонент
+      options:
+        - bot script / Telegram
+        - interview
+        - normalizer / профиль
+        - renderer / PDF
+        - ledger / платежи
+        - инфраструктура / CI
+        - документация
+
+  - type: checkboxes
+    id: invariants
+    attributes:
+      label: Совместимость с инвариантами
+      options:
+        - label: Предложение не требует придумывать данные кандидата
+          required: false
+        - label: Предложение сохраняет идемпотентность платежей и операций
+          required: false
+        - label: Изменение схемы профиля сопровождается версией и миграцией
+          required: false

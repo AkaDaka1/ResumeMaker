@@ -1,0 +1,78 @@
+name: Bug report
+description: Report a reproducible defect
+title: "[bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за отчёт. Пожалуйста, не прикладывайте реальные персональные данные,
+        `.env`, токены и ключи. Об уязвимостях сообщайте приватно по SECURITY.md.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Что произошло
+      description: Краткое описание дефекта и его влияния.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения
+      placeholder: |
+        1. Запустить ...
+        2. Вызвать ...
+        3. Увидеть ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемое поведение
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Фактическое поведение
+      description: Текст ошибки, логи без PII и секретов.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Компонент
+      options:
+        - ledger / операции
+        - платежи
+        - LLM / провайдеры
+        - согласия / данные
+        - API / конфигурация
+        - миграции / схема
+        - тесты / CI
+        - документация
+        - другое
+
+  - type: input
+    id: environment
+    attributes:
+      label: Окружение
+      description: ОС, версия Python, PostgreSQL, коммит.
+      placeholder: Windows 11, Python 3.15, PostgreSQL 18, commit abc1234
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Проверки
+      options:
+        - label: Я удалил(а) из отчёта секреты и персональные данные
+          required: true
+        - label: Я поискал(а) существующие issue по этой проблеме
+          required: false

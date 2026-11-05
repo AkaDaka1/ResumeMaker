@@ -1,0 +1,50 @@
+# --- secrets and local config -------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# --- python -------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+pip-wheel-metadata/
+*.egg
+
+# --- test and tooling caches --------------------------------------------------
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.tox/
+.nox/
+.hypothesis/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# --- local databases and runtime artifacts ------------------------------------
+.pgdata/
+*.log
+*.sqlite3
+*.db
+
+# --- editors and operating systems --------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- third-party API documentation kept locally, not redistributed ------------
+docs/kolhoz.md

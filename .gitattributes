@@ -1,0 +1,28 @@
+# Normalise line endings in the repository; check out platform-friendly ones.
+* text=auto eol=lf
+
+*.py   text diff=python
+*.md   text diff=markdown
+*.toml text
+*.yml  text
+*.yaml text
+*.ini  text
+*.json text
+*.example text
+.gitattributes text
+.gitignore     text
+LICENSE        text
+
+# Windows scripts keep CRLF so they run from Explorer and older PowerShell hosts.
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary assets must never be line-ending converted.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.ico  binary
+*.pdf  binary
+*.woff binary
+*.woff2 binary
